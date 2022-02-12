@@ -2,7 +2,7 @@ export const solarSystemTexturesDir      = '/textures/solar-system-textures'
 export const imaginaryPlanetsTexturesDir = '/textures/imaginary-planets-textures'
 
 export const mercuryInfo = {
-	radius           : 0.4,
+	radius           : 0.2,
 	distanceFromSun  : 5.8,
 	texture          : solarSystemTexturesDir + '/mercury.jpg',
 	revolutionPeriod : 0.24, 
@@ -10,7 +10,7 @@ export const mercuryInfo = {
 }
 
 export const venusInfo = {
-	radius           : 1.2,
+	radius           : 0.6,
 	distanceFromSun  : 10.9,
 	texture          : solarSystemTexturesDir + '/venus.jpg',
 	revolutionPeriod : 0.62, 
@@ -18,7 +18,7 @@ export const venusInfo = {
 }
 
 export const earthInfo = {
-	radius           : 1.2,
+	radius           : 0.6,
 	distanceFromSun  : 15,
 	texture          : solarSystemTexturesDir + '/earth.jpg',
 	revolutionPeriod : 1, 
@@ -26,7 +26,7 @@ export const earthInfo = {
 }
 
 export const marsInfo = {
-	radius           : 0.6,
+	radius           : 0.3,
 	distanceFromSun  : 23,
 	texture          : solarSystemTexturesDir + '/mars.jpg',
 	revolutionPeriod : 1.88, 
@@ -34,7 +34,7 @@ export const marsInfo = {
 }
 
 export const jupiterInfo = {
-	radius           : 14,
+	radius           : 7,
 	distanceFromSun  : 78,
 	texture          : solarSystemTexturesDir + '/jupiter.jpg',
 	revolutionPeriod : 11.9, 
@@ -42,7 +42,7 @@ export const jupiterInfo = {
 }
 
 export const saturnInfo = {
-	radius           : 12,
+	radius           : 6,
 	distanceFromSun  : 144,
 	texture          : solarSystemTexturesDir + '/saturn.jpg',
 	revolutionPeriod : 29.5, 
@@ -50,7 +50,7 @@ export const saturnInfo = {
 }
 
 export const uranusInfo = {
-	radius           : 5,
+	radius           : 2.5,
 	distanceFromSun  : 290,
 	texture          : solarSystemTexturesDir + '/uranus.jpg',
 	revolutionPeriod : 84, 
@@ -58,7 +58,7 @@ export const uranusInfo = {
 }
 
 export const neptuneInfo = {
-	radius           : 5,
+	radius           : 2.5,
 	distanceFromSun  : 450,
 	texture          : solarSystemTexturesDir + '/neptune.jpg',
 	revolutionPeriod : 164.8, 

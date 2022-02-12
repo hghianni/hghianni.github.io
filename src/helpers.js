@@ -9,12 +9,12 @@ export function clearSceneObjects(obj){
 
   if(obj.material){ 
     Object.keys(obj.material).forEach(prop => {
-      if(obj.material[prop])                                  
+      if(obj.material[prop] && typeof obj.material[prop].dispose === 'function')                                  
         obj.material[prop].dispose();                                                      
     })
     obj.material.dispose();
   }
-} 
+}  
 
 export function getRandomValue(topValue){
   return Math.floor(Math.random() * (topValue) +1)
@@ -31,8 +31,8 @@ export function setBackground(scene){
 }
 
 export function setCamera(scene){
-  var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
-  camera.position.set(0,0,300)
+  var camera = new THREE.PerspectiveCamera( 30, window.innerWidth/window.innerHeight, 1, 1000 );
+  camera.position.set(0,0,450)
   return camera
 }
 

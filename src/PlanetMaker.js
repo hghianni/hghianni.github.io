@@ -10,7 +10,7 @@ export class PlanetMaker {
 			positionX, 
 			positionY, 
 			positionZ, 
-			radius, 
+			radius  * this.options.sizeMultiplier, 
 			texture, 
 			revolutionPeriod, 
 			rotationPeriod, 

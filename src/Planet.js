@@ -1,5 +1,5 @@
 export class Planet {
-	constructor(positionX, positionY, positionZ, radius, texture, revolutionPeriod, rotationPeriod, options){
+	constructor(positionX, positionY, positionZ, radius, texture, revolutionPeriod, rotationPeriod){
 
 		this.positionX        = positionX
 		this.positionY        = positionY
@@ -8,12 +8,11 @@ export class Planet {
 		this.texture          = texture
 		this.revolutionPeriod = revolutionPeriod
 		this.rotationPeriod   = rotationPeriod
-		this.options          = options
 	}
 
 	create(){
 		const texture  = new THREE.TextureLoader().load(this.texture)
-		var geometry   = new THREE.SphereGeometry(this.radius * this.options.sizeMultiplier, 32, 32);
+		var geometry   = new THREE.SphereGeometry(this.radius, 32, 32);
 		const material = new THREE.MeshBasicMaterial( {map: texture} );
         var mesh       = new THREE.Mesh( geometry, material );
         mesh.position.x += this.positionX;
@@ -28,6 +27,6 @@ export class Planet {
 
 	getRotationSpeedAroundItself(rotationUnit){
 		const periodInDays = this.rotationPeriod/365
-		return (1 / (periodInDays)) * rotationUnit
+		return (1 / (periodInDays)) * rotationUnit * 0.001
 	}
 }

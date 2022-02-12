@@ -1,5 +1,5 @@
 import { getRandomValue} from '../src/helpers.js';
-import { Planet } from '../src/Planet.js';
+import { PlanetMaker } from '../src/PlanetMaker.js';
 import {imaginaryPlanetsTexturesDir} from '../src/constants.js';
 
 export class ImaginaryPlanetGenerator {
@@ -23,6 +23,6 @@ export class ImaginaryPlanetGenerator {
 		const textureDir       = imaginaryPlanetsTexturesDir + '/' + textureNumber + '.jpeg'
 		const revolutionPeriod = getRandomValue(this.topRevolutionPeriod)
 		const rotationPeriod   = getRandomValue(this.topRotationPeriod)
-		return new Planet(x,y,z, radius, textureDir, revolutionPeriod, rotationPeriod, this.options)
+		return new PlanetMaker(x,y,z, radius, textureDir, revolutionPeriod, rotationPeriod, this.options)
 	}
 }

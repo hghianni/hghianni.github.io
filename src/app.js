@@ -37,6 +37,8 @@ const controls = setControls(camera, renderer)
 var meshes        = Array()
 var planetSystems = Array()
 var planets       = Array()
+var sun 
+var sunMesh
 
 // Add objects to scene
 createObjects()
@@ -50,8 +52,9 @@ function createObjects(){
 
 	clearScene(scene)
 
-	var sun = new Sun();
-	scene.add(sun.create())
+	sun     = new Sun();
+	sunMesh = sun.create()
+	scene.add(sunMesh)
 	const sunPosition = sun.radius;
 	const options     = new PlanetOptions(sizeMultiplier)
 
@@ -82,7 +85,7 @@ function createObjects(){
 			addPlanetToScene(planets[i])
 		}
 
-	addSaturnRing()
+		addSaturnRing()
 	}
 
 	animate()
@@ -94,6 +97,8 @@ function animate() {
 		meshes[i].rotateY(planets[i].getRotationSpeedAroundItself(rotationUnit))
 		planetSystems[i].rotateY(planets[i].getRotationSpeedAroundSun(rotationUnit))
 	}
+
+	sunMesh.rotateY(sun.getRotationSpeedAroundItself(rotationUnit))
 
 	requestAnimationFrame( animate );
 	controls.update();

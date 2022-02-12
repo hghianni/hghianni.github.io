@@ -3,7 +3,7 @@ import {solarSystemTexturesDir} from '../src/constants.js';
 export class Sun {
 	constructor(){
 		this.rotationPeriod = 27
-		this.radius         = 140
+		this.radius         = 70
 	}
 
 	create(){
