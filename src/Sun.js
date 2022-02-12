@@ -14,6 +14,6 @@ export class Sun {
 	}
 
 	getRotationSpeedAroundItself(rotationUnit){
-		return 1 / (this.rotationPeriod/365)
+		return (1 / (this.rotationPeriod/365)) * rotationUnit * 0.001
 	}
 }

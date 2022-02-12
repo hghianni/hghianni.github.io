@@ -23,6 +23,7 @@ export class ImaginaryPlanetGenerator {
 		const textureDir       = imaginaryPlanetsTexturesDir + '/' + textureNumber + '.jpeg'
 		const revolutionPeriod = getRandomValue(this.topRevolutionPeriod)
 		const rotationPeriod   = getRandomValue(this.topRotationPeriod)
-		return new PlanetMaker(x,y,z, radius, textureDir, revolutionPeriod, rotationPeriod, this.options)
+		const maker            = new PlanetMaker(this.options) 
+		return maker.makePlanet(x,y,z, radius, textureDir, revolutionPeriod, rotationPeriod)
 	}
 }
